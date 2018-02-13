@@ -1,0 +1,21 @@
+GNU gdb (GDB) Red Hat Enterprise Linux (7.2-75.el6)
+Copyright (C) 2010 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /chalmers/users/grzelka/projects/EDA263_CODE/Lab1/login_linux...done.
+[?1034h(gdb) handle SIG33 pass nostop noprint
+Signal        Stop	Print	Pass to program	Description
+SIG33         No	No	Yes		Real-time event 33
+(gdb) set pagination 0
+(gdb) run
+Starting program: /chalmers/users/grzelka/projects/EDA263_CODE/Lab1/login_linux 
+
+Program received signal SIGINT, Interrupt.
+0x00000030c7edb770 in __read_nocancel () from /lib64/libc.so.6
+Missing separate debuginfos, use: debuginfo-install glibc-2.12-1.209.el6_9.2.x86_64 nss-softokn-freebl-3.14.3-23.el6_7.x86_64
+(gdb) 

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="EDA262_CODE"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="EDA262_CODE">
+				<Option output="E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/EDA262_CODE.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++/backward"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 EDA262_CODE"/>
+					<CompileFile command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="EDA262_CODE/fast">
+				<Option output="E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/EDA262_CODE.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include/c++/backward"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 EDA262_CODE/fast"/>
+					<CompileFile command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Software/mingw-w64/x86_64-7.2.0-posix-seh-rt_v5-rev1/mingw64/bin/mingw32-make.exe -f &quot;E:/EDA263 - Computer Security/EDA262_CODE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/EDA263 - Computer Security/EDA262_CODE/Lab1/login_linux.c">
+			<Option target="EDA262_CODE"/>
+		</Unit>
+		<Unit filename="E:/EDA263 - Computer Security/EDA262_CODE/Lab1/makepass.c">
+			<Option target="EDA262_CODE"/>
+		</Unit>
+		<Unit filename="E:/EDA263 - Computer Security/EDA262_CODE/Lab1/pwent.c">
+			<Option target="EDA262_CODE"/>
+		</Unit>
+		<Unit filename="E:/EDA263 - Computer Security/EDA262_CODE/Lab1/pwent.h">
+			<Option target="EDA262_CODE"/>
+		</Unit>
+		<Unit filename="E:/EDA263 - Computer Security/EDA262_CODE/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

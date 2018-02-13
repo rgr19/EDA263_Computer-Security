@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3de1596c-b1ec-4086-a7c8-3c4647e959a4" name="remote11.chalmers.se" url="http://remote11.chalmers.se">
+        <fileTransfer host="remote11.chalmers.se" port="22" rootFolder="/chalmers/users/grzelka/projects/EDA263_CODE" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

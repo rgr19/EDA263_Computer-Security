@@ -1,0 +1,44 @@
+/*
+UTPD style sheet
+Designed by Chris Latham, Technology Resources for Employee and Campus Services
+
+dark blue: #246
+dark gray: #555
+light gray: #EEE
+burnt orange: #C50
+*/
+
+body {font-family: Georgia, "Times New Roman", Times, serif; font-size: 80%;}
+h1 {font-weight: normal; font-size: 2em; padding: 0; margin: 0 0 2em 0; line-height: normal;}
+h1, h2, h3, h4, h5, h6 {margin-bottom: 0em;}
+h2 {font-size: 1.5em;}
+h3, h4, h5, h6 {font-size: 1em;}
+p {margin-top: 0em;}
+ul {list-style: square;}
+li {margin-bottom: .5em;}
+dt {font-weight: bold;}
+a {color: black; text-decoration: underline;}
+img {border: none;}
+input {display: none;}
+
+.hidden {display: none;}
+
+#utheader, #footer, #mainnav, #subnav {display: none;}
+
+#mast {text-align: left;}
+#mast img {display: none;}
+#mast img.print {display: block;}
+
+#content {margin: 0; background: none; padding: 0 0 1em 6em;}
+
+
+/* campus watch table */
+.dailyreport {/*width: 80%;*/ margin: auto;}
+.dailyreport caption {font-weight: bold; text-align: left; border-bottom: 1px #555 solid; padding: 5px 0px;}
+.dailyreport th, .dailyreport td {border-bottom: 1px #555 dotted; vertical-align: top; padding: 5px;}
+.dailyreport th {text-align: left; white-space: nowrap;}
+.dailyreport td {}
+
+
+/* External link, icon to indicate the link leaves the site */
+a.external {border-bottom: 1px black dotted; padding-right: 0; background: none;}
