@@ -6,7 +6,5 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories("E:/_Include/remote11.chalmers.se/usr/include")
 
 add_executable(login_linux
-        Lab1/login_linux.c
-        Lab1/makepass.c
-        Lab1/pwent.c
-        Lab1/pwent.h Hacking/Computerphile/buffer_overflow_000.c)
+        Lab1/uid_tests/uid_drop_test.c
+        )

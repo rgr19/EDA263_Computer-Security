@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="a3df141a-8c48-444a-b3e6-e0078ec093ee" name="vm.kali" url="http://172.30.212.178">
+        <fileTransfer host="172.30.212.178" port="22" rootFolder="/home/a/projects/EDA263_CODE/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

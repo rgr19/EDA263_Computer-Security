@@ -1,8 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/login_linux.dir/Lab1/login_linux.c.obj"
-  "CMakeFiles/login_linux.dir/Lab1/makepass.c.obj"
-  "CMakeFiles/login_linux.dir/Lab1/pwent.c.obj"
-  "CMakeFiles/login_linux.dir/Hacking/Computerphile/buffer_overflow_000.c.obj"
+  "CMakeFiles/login_linux.dir/Lab1/uid_tests/uid_drop_test.c.obj"
   "login_linux.pdb"
   "login_linux.exe"
   "login_linux.exe.manifest"

@@ -20,8 +20,7 @@
 #define TRUE 1
 #define FALSE 0
 #define LENGTH 16
-#define MAX_PASSWD_AGE 4
-#define MAX_EMPTY_LOGINS 3
+#define MAX_PASSWD_AGE 10
 #define MAX_LOGIN_ATTEMPTS 5
 /*
  in step 2:
@@ -34,8 +33,8 @@
 
 
 //flags for toggling protections, hange 0 to 1 to enable
-#define DOSIGNAL_CATCHING 0
-#define BUFFER_OVERFLOW_PROTECTION 0
+#define DOSIGNAL_CATCHING 1
+#define BUFFER_OVERFLOW_PROTECTION 1
 
 //get line flags
 #define OK       0

@@ -4,10 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "E:/EDA263 - Computer Security/EDA263_CODE/Hacking/Computerphile/buffer_overflow_000.c" "E:/EDA263 - Computer Security/EDA263_CODE/cmake-build-debug/CMakeFiles/login_linux.dir/Hacking/Computerphile/buffer_overflow_000.c.obj"
-  "E:/EDA263 - Computer Security/EDA263_CODE/Lab1/login_linux.c" "E:/EDA263 - Computer Security/EDA263_CODE/cmake-build-debug/CMakeFiles/login_linux.dir/Lab1/login_linux.c.obj"
-  "E:/EDA263 - Computer Security/EDA263_CODE/Lab1/makepass.c" "E:/EDA263 - Computer Security/EDA263_CODE/cmake-build-debug/CMakeFiles/login_linux.dir/Lab1/makepass.c.obj"
-  "E:/EDA263 - Computer Security/EDA263_CODE/Lab1/pwent.c" "E:/EDA263 - Computer Security/EDA263_CODE/cmake-build-debug/CMakeFiles/login_linux.dir/Lab1/pwent.c.obj"
+  "E:/EDA263_Computer-Security/EDA263_CODE/Lab1/uid_tests/uid_drop_test.c" "E:/EDA263_Computer-Security/EDA263_CODE/cmake-build-debug/CMakeFiles/login_linux.dir/Lab1/uid_tests/uid_drop_test.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
