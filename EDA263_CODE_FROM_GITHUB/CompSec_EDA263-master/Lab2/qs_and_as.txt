@@ -1,0 +1,216 @@
+﻿1. What are your names, lab-group, and civic registration numbers?
+    
+    Lab group 1
+        Pär Svedberg    8211127652
+        Oskar Åkergren  8805087114
+
+2. What is the fingerprint of your key?
+    
+    8986 B8A5 ACEC CACE 1FAF  03C0 749C A46C D216 831F
+
+3. What mail client did you use for the lab?
+    
+    Mozilla Thunderbird
+
+4. Will you use gpg in the future? Please specify your reasons.
+
+    For special use, secret company information or other sensitive information
+    in text form. 
+
+5. What is the purpose of signing in terms of the "CIA" (Confidentiality, 
+Integrity, Availability)? Motivate your answer. Explain how signing works in
+PGP? Why is a hash function used?
+
+    (A) Integrity. A digital signature provides authenticity to a message,
+        to assure the recipient that the message is not tampered with and
+        originated from the right person.
+
+    (B) The steps of signing in PGP:
+
+        (1) In PGP, to sign a message the sending person uses a one-way hashing
+            function on the plaintext message to generate output of a
+            predetermined length, called a message digest.
+        (2) This digest is then used together with the senders private key to
+            produce the signature. By doing this, the digest's integrity is
+            protected by the sender's signature, and it assures that it has not
+            been tampered with.
+        (3) The message and signature are then sent, and the recipient can
+            verify the message's digest.
+        (4) The recipient verifies the message's integrity by using PGP to
+            calculate a digest of the received message and compares it to the
+            signed digest provided by the sender. The integrity of the signed
+            digest is verified by decrypting it using the sender's public key.
+
+    (C) By using encryption to digitally sign messages, there would be
+        significant overhead in data usage, at least twice as much as
+        the original, and this is countered by using the fixed-length hashing
+        function. The hashing function used is strong in the sense that if
+        the data is manipulated, the output of the hash is different.
+
+6. What is the purpose of encryption in terms of the "CIA"? Motivate your answer.
+Explain how encryption and decryption works in PGP? Make sure that your answer
+includes how PGP combines the best features of both conventional and public key
+cryptography.
+
+    (A) CIA: confidentiality. The main reason to encrypt a message is to make 
+        sure no on else but the sender and receiver can work out the content of 
+        the message, if a third party get hold of it.
+
+    (B) When you are using PGP to encrypt a message these steps are being taken:
+        
+        Encrypting:
+        (1) Generating a symmetric key to encrypt the message, aka "session key".
+        (2) Encrypt the message with the session key.
+        (2) Fetching the public key of the recipient.
+        (3) Encrypt the session key, with the fetched public key.
+        (4) Send the now encrypted message and the encrypted session key.
+
+        Decrypting:
+        (1) Decrypt the session key with private key of the asymmetric pair.
+        (2) Decrypt the message with the decrypted session key.
+
+    (C) The reason the conventional crypto is being used is that 
+        "[m]any symmetric ciphers are stronger from a security standpoint" 
+        according to https://www.gnupg.org/gph/en/manual.html#AEN210 .
+        This means that the symmetric encryption is the stronger alternative, 
+        to secure the content of the message.
+
+        The reason of that the public key crypto is used is because of the ease
+        of sharing the keys. A long symmetric key can be troublesome to share
+        and if it get lost, someone else might decrypt the message. If you 
+        change the symmetric key often, the more sharing will be needed and greater risk of losing the key. 
+
+        By using the hybrid encryption system, the symmetric key is changed for 
+        every message, so the encryption is as secure as possible and the session
+        key is encrypted by the asymmetric system so that the sharing of the 
+        session key is secure. This means that if someone finds out the symmetric
+        key, only the content of one message is deciphered. 
+
+7. In the lab you validated the keys by asking the owners verbally for the 
+fingerprint.
+Explain how the trust system (web of trust) in GnuPG works and how you validate
+a key belonging to a person you do not know personally. Your answer must
+distinguish between (owner) trust and (key) validity (sometimes called validity
+trust). You should also include the conditions for when you start to consider
+keys
+from foreigners valid.
+
+    If you as a user trust that someone's public key is valid, you can sign it
+    in GPG. When it is a key of someone you know, the validation of the key's
+    fingerprint is trivial. The problem is when you need to validate the keys
+    of people you do not know. To be able to do that, you can make use of that
+    people in your keyring may have signed someone else's key. GPG lets you
+    assign a trust a value on anyone in your key ring, and depending on what
+    values you have assigned to different people's keys, GPG can decide if a
+    keys from strangers are valid.
+
+    By default, GPG consider keys valid if it has:
+        - your own signature
+        - the signature of one person you have assigned "fully trusted"
+        - the signatures of three people you have assigned "marginally trusted"
+        
+    Furthermore, the number of steps leading from the key to be validated to
+    your own, need to be at most five. Again, the number of steps and how many
+    signatures are needed is the default setting, and it can be changed if need
+    be.
+
+
+8. Consider the example shown in the Figure 3 below. Assume you have (at least)
+five keys on your key ring. You have personally signed the keys of Alice, 
+Blake and Chloe. They, in turn, have signed the key of Dharma. Finally, Dharma 
+has signed the key of Elena. From the figure, you can see the current owner 
+trust as well as the key validity (calculated trust value). To be succinct, we 
+have marked these entries as -/-, where the left entry stands for owner trust 
+and the right entry key validity.
+
+            m/f
+      _---> Alice -\
+     /              \
+    /       m/f      \> -/m             -/-
+You ------> Blake ----> Dahrma  --->    Elena
+    \                 ->
+     \      q/f      /
+      ----> Chloe  -/
+
+Figure 3: Example of a web of trust. 'A -> B' indicates that A has signed B's key.
+
+For example, consider Alice. As you have personally signed her key, it is fully
+trusted (i.e. you know that the person Alice owns this key). Furthermore, you
+also know that Alice is quite messy and has a history of signing other people's
+keys without the proper validation. For that reason, you have assigned the 
+owner trust of Alice to marginal. The same goes for Blake. However, Chloe is a
+new acquaintance and you do not know whether she is careful when validating 
+keys. Hence, you put "Don't know" (q) for owner trust of Chloe. Depending on 
+your version of GPG, this may be listed as trust: undefined, validity: full. 
+You have not entered any owner trust for either Dharma or Elena, hence the 
+- in the figure (may be marked as unknown in gpg).
+
+    (a) You know Dharma, and you now enter that you trust her fully. If you 
+        list the key for Dharma, it would now show: f/m 
+        (trust: full, validity: marginal).
+    
+        What would be listed for Elena?
+            Elena trust: q, validity: q
+
+    (b) Time passes, and you realize that Chloe is actually somewhat trustworthy.
+        For that reason, you change the owner trust of Chloe to marginal 
+        (Chloe: m/f). What would now be listed for Elena? We assume the changes
+        done in (a) are still in effect.
+            Elena trust: q, validity: f
+
+9. What is your public key (in ASCII-format)? Use the menu option Attach My
+Public Key in Enigmail/OpenPGP to include your key with the email.
+You can also manually insert the key into the email. First, you need to export
+a fresh copy of the key (with the armor option) to a file. Second, include the
+contents of this file into the email. Make sure that there is a blank line 
+between your answers above and the start of the preamble of the key block:
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.14 (GNU/Linux)
+
+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
+-----END PGP PUBLIC KEY BLOCK-----
+
